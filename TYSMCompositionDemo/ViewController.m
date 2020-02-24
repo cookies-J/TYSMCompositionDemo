@@ -148,6 +148,7 @@
 }
 
 - (void)handleSplitRange {
+    [self handlePlayerButton:NO];
     [self removeFromTimeRange:CMTimeRangeMake(kCMTimeZero, CMTimeMakeWithSeconds(20, kTimeScale))];
 }
 
