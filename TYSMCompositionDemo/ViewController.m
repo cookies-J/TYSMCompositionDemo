@@ -207,7 +207,7 @@
     return [[formatter dateFromString:timeString] timeIntervalSince1970];
 }
 
-- (IBAction)tapTranscodeButton:(UIBarButtonItem)sender {
+- (IBAction)tapTranscodeButton:(UIBarButtonItem *)sender {
     
     NSString *outputPath = [NSTemporaryDirectory() stringByAppendingString:@"output.mp4"];
     NSURL *outputURL = [NSURL fileURLWithPath:outputPath];
