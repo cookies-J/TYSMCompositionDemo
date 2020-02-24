@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TYSMMediaEditView">
+            <connections>
+                <outlet property="playerButton" destination="gjS-FQ-zhT" id="3Qg-Ua-DD7"/>
+                <outlet property="progressView" destination="krV-cr-quh" id="jH2-VL-3YY"/>
+                <outlet property="scrollView" destination="pRJ-Wc-9gY" id="vl6-CI-MOc"/>
+                <outlet property="timeLabel" destination="J43-Af-MLh" id="Yuw-Yn-Ot4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRJ-Wc-9gY">
+                    <rect key="frame" x="20" y="88" width="374" height="788"/>
+                </scrollView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Ny-wH-WHe">
+                    <rect key="frame" x="20" y="20" width="374" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7lQ-0M-c2r">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="60"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NgR-U1-SGe">
+                                    <rect key="frame" x="0.0" y="0.0" width="74" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mby-xf-aYY">
+                                            <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                            <state key="normal" title="裁剪 20 秒">
+                                                <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="tapSplitRange:" destination="-1" eventType="touchUpInside" id="QxI-CP-nce"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EM-QO-Exm">
+                                            <rect key="frame" x="0.0" y="30" width="74" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                            <state key="normal" title="追加视频">
+                                                <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="tapAppendVideoButton:" destination="-1" eventType="touchUpInside" id="St3-yU-8Bz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00:000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J43-Af-MLh">
+                                    <rect key="frame" x="148.5" y="20" width="78.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-FQ-zhT">
+                                    <rect key="frame" x="323" y="15" width="31" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                    <state key="normal" title="播放">
+                                        <color key="titleColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tapPlaybutton:" destination="-1" eventType="touchUpInside" id="vMN-V6-9tK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7lQ-0M-c2r" secondAttribute="trailing" constant="20" symbolic="YES" id="sTZ-CO-7Jp"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmd-Ta-pE5">
+                    <rect key="frame" x="206.5" y="80" width="1" height="796"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="Wtx-Ze-Vu6"/>
+                    </constraints>
+                </view>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="krV-cr-quh">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="5"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="vse-VF-KXv"/>
+                    </constraints>
+                    <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="trackTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pRJ-Wc-9gY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="AT5-No-0Sw"/>
+                <constraint firstAttribute="bottom" secondItem="pRJ-Wc-9gY" secondAttribute="bottom" constant="20" symbolic="YES" id="D1y-Pk-Lpn"/>
+                <constraint firstItem="7Ny-wH-WHe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="HXf-ij-nOP"/>
+                <constraint firstItem="fmd-Ta-pE5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mx4-Zz-gY9"/>
+                <constraint firstItem="fmd-Ta-pE5" firstAttribute="top" secondItem="7Ny-wH-WHe" secondAttribute="bottom" id="QYG-md-M2O"/>
+                <constraint firstAttribute="trailing" secondItem="7Ny-wH-WHe" secondAttribute="trailing" constant="20" symbolic="YES" id="h72-Hq-4Fi"/>
+                <constraint firstAttribute="trailing" secondItem="krV-cr-quh" secondAttribute="trailing" id="hHD-Yc-Et3"/>
+                <constraint firstItem="krV-cr-quh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="noX-HQ-Ql5"/>
+                <constraint firstAttribute="bottom" secondItem="fmd-Ta-pE5" secondAttribute="bottom" constant="20" symbolic="YES" id="pqh-QF-ARU"/>
+                <constraint firstAttribute="trailing" secondItem="pRJ-Wc-9gY" secondAttribute="trailing" constant="20" symbolic="YES" id="qQC-jc-hdh"/>
+                <constraint firstItem="krV-cr-quh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="t4F-dx-Lms"/>
+                <constraint firstItem="7Ny-wH-WHe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" symbolic="YES" id="tqf-aA-dlx"/>
+                <constraint firstItem="pRJ-Wc-9gY" firstAttribute="top" secondItem="7Ny-wH-WHe" secondAttribute="bottom" constant="8" symbolic="YES" id="uMC-HG-aqd"/>
+            </constraints>
+            <point key="canvasLocation" x="49" y="120"/>
+        </view>
+    </objects>
+</document>

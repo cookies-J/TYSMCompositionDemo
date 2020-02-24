@@ -14,6 +14,22 @@
 		14375A992402C0D80040FBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14375A982402C0D80040FBBD /* Assets.xcassets */; };
 		14375A9C2402C0D80040FBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14375A9A2402C0D80040FBBD /* LaunchScreen.storyboard */; };
 		14375A9F2402C0D80040FBBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14375A9E2402C0D80040FBBD /* main.m */; };
+		14375AB62402C0FF0040FBBD /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 14375AA72402C0FF0040FBBD /* Shader.fsh */; };
+		14375AB72402C0FF0040FBBD /* TYSMPlayerGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14375AA82402C0FF0040FBBD /* TYSMPlayerGLView.m */; };
+		14375AB82402C0FF0040FBBD /* TYSMPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14375AA92402C0FF0040FBBD /* TYSMPlayerController.m */; };
+		14375AB92402C0FF0040FBBD /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 14375AAA2402C0FF0040FBBD /* Shader.vsh */; };
+		14375ABF2402C34D0040FBBD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14375ABE2402C34D0040FBBD /* AVFoundation.framework */; };
+		14375AC12402C3510040FBBD /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14375AC02402C3510040FBBD /* CoreVideo.framework */; };
+		14375AC32402C35D0040FBBD /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14375AC22402C35D0040FBBD /* CoreMedia.framework */; };
+		14375AC52402C3630040FBBD /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14375AC42402C3630040FBBD /* CoreAudio.framework */; };
+		14375B932402D2D30040FBBD /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14375B922402D2D30040FBBD /* OpenGLES.framework */; };
+		14375B952402D8D40040FBBD /* TYSMMediaEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14375B942402D8D40040FBBD /* TYSMMediaEditView.xib */; };
+		14375B992402DAD80040FBBD /* TYSMMediaEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14375B982402DAD80040FBBD /* TYSMMediaEditView.m */; };
+		14375BA9240331A60040FBBD /* TYSMTranscoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 14375BA1240331A60040FBBD /* TYSMTranscoder.m */; };
+		14375BAA240331A60040FBBD /* TYSMEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 14375BA4240331A60040FBBD /* TYSMEncoder.m */; };
+		14375BAB240331A60040FBBD /* TYSMDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 14375BA6240331A60040FBBD /* TYSMDecoder.m */; };
+		14375BB6240343950040FBBD /* A.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 14375BB5240343940040FBBD /* A.MOV */; };
+		1480CF842403455D00E6577E /* B.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 14375BAE240342620040FBBD /* B.MP4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +45,29 @@
 		14375A9B2402C0D80040FBBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14375A9D2402C0D80040FBBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14375A9E2402C0D80040FBBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14375AA72402C0FF0040FBBD /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		14375AA82402C0FF0040FBBD /* TYSMPlayerGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSMPlayerGLView.m; sourceTree = "<group>"; };
+		14375AA92402C0FF0040FBBD /* TYSMPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSMPlayerController.m; sourceTree = "<group>"; };
+		14375AAA2402C0FF0040FBBD /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		14375AAB2402C0FF0040FBBD /* TYSMPlayerGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSMPlayerGLView.h; sourceTree = "<group>"; };
+		14375AAC2402C0FF0040FBBD /* TYSMPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSMPlayerController.h; sourceTree = "<group>"; };
+		14375ABE2402C34D0040FBBD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		14375AC02402C3510040FBBD /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		14375AC22402C35D0040FBBD /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		14375AC42402C3630040FBBD /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		14375ACB2402C9450040FBBD /* TYSMAppConfig.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSMAppConfig.pch; sourceTree = "<group>"; };
+		14375B922402D2D30040FBBD /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		14375B942402D8D40040FBBD /* TYSMMediaEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TYSMMediaEditView.xib; sourceTree = "<group>"; };
+		14375B972402DAD80040FBBD /* TYSMMediaEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSMMediaEditView.h; sourceTree = "<group>"; };
+		14375B982402DAD80040FBBD /* TYSMMediaEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSMMediaEditView.m; sourceTree = "<group>"; };
+		14375BA1240331A60040FBBD /* TYSMTranscoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSMTranscoder.m; sourceTree = "<group>"; };
+		14375BA3240331A60040FBBD /* TYSMEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSMEncoder.h; sourceTree = "<group>"; };
+		14375BA4240331A60040FBBD /* TYSMEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSMEncoder.m; sourceTree = "<group>"; };
+		14375BA6240331A60040FBBD /* TYSMDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYSMDecoder.m; sourceTree = "<group>"; };
+		14375BA7240331A60040FBBD /* TYSMDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSMDecoder.h; sourceTree = "<group>"; };
+		14375BA8240331A60040FBBD /* TYSMTranscoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYSMTranscoder.h; sourceTree = "<group>"; };
+		14375BAE240342620040FBBD /* B.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = B.MP4; sourceTree = "<group>"; };
+		14375BB5240343940040FBBD /* A.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = A.MOV; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +75,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14375B932402D2D30040FBBD /* OpenGLES.framework in Frameworks */,
+				14375AC32402C35D0040FBBD /* CoreMedia.framework in Frameworks */,
+				14375ABF2402C34D0040FBBD /* AVFoundation.framework in Frameworks */,
+				14375AC52402C3630040FBBD /* CoreAudio.framework in Frameworks */,
+				14375AC12402C3510040FBBD /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +91,7 @@
 			children = (
 				14375A8B2402C0D70040FBBD /* TYSMCompositionDemo */,
 				14375A8A2402C0D70040FBBD /* Products */,
+				14375ABD2402C34D0040FBBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,19 +106,97 @@
 		14375A8B2402C0D70040FBBD /* TYSMCompositionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				14375BA0240331A60040FBBD /* Codec */,
+				14375AA52402C0FF0040FBBD /* Player */,
+				14375B9F240304E20040FBBD /* resources */,
+				14375ACB2402C9450040FBBD /* TYSMAppConfig.pch */,
 				14375A8C2402C0D70040FBBD /* AppDelegate.h */,
 				14375A8D2402C0D70040FBBD /* AppDelegate.m */,
+				14375A982402C0D80040FBBD /* Assets.xcassets */,
+				14375A9D2402C0D80040FBBD /* Info.plist */,
+				14375A9A2402C0D80040FBBD /* LaunchScreen.storyboard */,
+				14375A9E2402C0D80040FBBD /* main.m */,
+				14375A952402C0D70040FBBD /* Main.storyboard */,
 				14375A8F2402C0D70040FBBD /* SceneDelegate.h */,
 				14375A902402C0D70040FBBD /* SceneDelegate.m */,
 				14375A922402C0D70040FBBD /* ViewController.h */,
 				14375A932402C0D70040FBBD /* ViewController.m */,
-				14375A952402C0D70040FBBD /* Main.storyboard */,
-				14375A982402C0D80040FBBD /* Assets.xcassets */,
-				14375A9A2402C0D80040FBBD /* LaunchScreen.storyboard */,
-				14375A9D2402C0D80040FBBD /* Info.plist */,
-				14375A9E2402C0D80040FBBD /* main.m */,
 			);
 			path = TYSMCompositionDemo;
+			sourceTree = "<group>";
+		};
+		14375AA52402C0FF0040FBBD /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				14375B962402DAAD0040FBBD /* UIComponent */,
+				14375AA72402C0FF0040FBBD /* Shader.fsh */,
+				14375AAA2402C0FF0040FBBD /* Shader.vsh */,
+				14375AAC2402C0FF0040FBBD /* TYSMPlayerController.h */,
+				14375AA92402C0FF0040FBBD /* TYSMPlayerController.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		14375ABD2402C34D0040FBBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14375B922402D2D30040FBBD /* OpenGLES.framework */,
+				14375AC42402C3630040FBBD /* CoreAudio.framework */,
+				14375AC22402C35D0040FBBD /* CoreMedia.framework */,
+				14375AC02402C3510040FBBD /* CoreVideo.framework */,
+				14375ABE2402C34D0040FBBD /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14375B962402DAAD0040FBBD /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				14375AAB2402C0FF0040FBBD /* TYSMPlayerGLView.h */,
+				14375AA82402C0FF0040FBBD /* TYSMPlayerGLView.m */,
+				14375B972402DAD80040FBBD /* TYSMMediaEditView.h */,
+				14375B982402DAD80040FBBD /* TYSMMediaEditView.m */,
+				14375B942402D8D40040FBBD /* TYSMMediaEditView.xib */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
+		14375B9F240304E20040FBBD /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				14375BB5240343940040FBBD /* A.MOV */,
+				14375BAE240342620040FBBD /* B.MP4 */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		14375BA0240331A60040FBBD /* Codec */ = {
+			isa = PBXGroup;
+			children = (
+				14375BA1240331A60040FBBD /* TYSMTranscoder.m */,
+				14375BA2240331A60040FBBD /* Encoder */,
+				14375BA5240331A60040FBBD /* Decoder */,
+				14375BA8240331A60040FBBD /* TYSMTranscoder.h */,
+			);
+			path = Codec;
+			sourceTree = "<group>";
+		};
+		14375BA2240331A60040FBBD /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				14375BA3240331A60040FBBD /* TYSMEncoder.h */,
+				14375BA4240331A60040FBBD /* TYSMEncoder.m */,
+			);
+			path = Encoder;
+			sourceTree = "<group>";
+		};
+		14375BA5240331A60040FBBD /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				14375BA6240331A60040FBBD /* TYSMDecoder.m */,
+				14375BA7240331A60040FBBD /* TYSMDecoder.h */,
+			);
+			path = Decoder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +256,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14375BB6240343950040FBBD /* A.MOV in Resources */,
+				14375B952402D8D40040FBBD /* TYSMMediaEditView.xib in Resources */,
+				14375AB62402C0FF0040FBBD /* Shader.fsh in Resources */,
 				14375A9C2402C0D80040FBBD /* LaunchScreen.storyboard in Resources */,
 				14375A992402C0D80040FBBD /* Assets.xcassets in Resources */,
+				1480CF842403455D00E6577E /* B.MP4 in Resources */,
 				14375A972402C0D70040FBBD /* Main.storyboard in Resources */,
+				14375AB92402C0FF0040FBBD /* Shader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +275,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				14375A942402C0D70040FBBD /* ViewController.m in Sources */,
+				14375AB82402C0FF0040FBBD /* TYSMPlayerController.m in Sources */,
 				14375A8E2402C0D70040FBBD /* AppDelegate.m in Sources */,
 				14375A9F2402C0D80040FBBD /* main.m in Sources */,
+				14375AB72402C0FF0040FBBD /* TYSMPlayerGLView.m in Sources */,
+				14375BA9240331A60040FBBD /* TYSMTranscoder.m in Sources */,
 				14375A912402C0D70040FBBD /* SceneDelegate.m in Sources */,
+				14375BAB240331A60040FBBD /* TYSMDecoder.m in Sources */,
+				14375BAA240331A60040FBBD /* TYSMEncoder.m in Sources */,
+				14375B992402DAD80040FBBD /* TYSMMediaEditView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -277,7 +411,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -291,6 +425,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SLD7TW6TA;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TYSMCompositionDemo/TYSMAppConfig.pch";
 				INFOPLIST_FILE = TYSMCompositionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,6 +444,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6SLD7TW6TA;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TYSMCompositionDemo/TYSMAppConfig.pch";
 				INFOPLIST_FILE = TYSMCompositionDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

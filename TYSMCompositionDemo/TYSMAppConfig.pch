@@ -1,0 +1,23 @@
+//
+//  TYSMAppConfig.pch
+//
+//  Created by jele lam on 10/1/2020.
+//  Copyright © 2020 CookiesJ. All rights reserved.
+//
+
+#ifndef TYSMAppConfig_pch
+#define TYSMAppConfig_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
+
+// CMTime 用到的时间片 默认 100
+static int32_t const kTimeScale = 100;
+
+// Media 功能：设置缩略图的大小 默认 100
+static CGFloat const kImageWidth = 100;
+
+#endif /* TYSMAppConfig_pch */
