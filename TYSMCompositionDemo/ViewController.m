@@ -207,12 +207,14 @@
     return [[formatter dateFromString:timeString] timeIntervalSince1970];
 }
 
-- (IBAction)tapTranscodeButton:(id)sender {
+- (IBAction)tapTranscodeButton:(UIBarButtonItem)sender {
+    
     NSString *outputPath = [NSTemporaryDirectory() stringByAppendingString:@"output.mp4"];
     NSURL *outputURL = [NSURL fileURLWithPath:outputPath];
     [[NSFileManager defaultManager] removeItemAtURL:outputURL error:nil];
 
     [self.mediaEditView setUserInteractionEnabled:NO];
+    [sender setEnabled:NO];
     // 暂停
     [self handlePlayerButton:NO];
     
@@ -225,6 +227,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakself.mediaEditView setUserInteractionEnabled:YES];
             [weakself.mediaEditView updateProgress:0];
+            [sender setEnabled:YES];
         });
     } videoProgress:^(double progress) {
         NSLog(@"%.1lf",progress);
