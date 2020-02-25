@@ -1,11 +1,11 @@
 # TYSMCompositionDemo
-简单的视频剪辑 demo AVComposition 
+# 简单的视频剪辑 demo AVComposition 
 
-## 本 demo 主要做了一下事情：
+## 本 demo 主要做了以下事情：
 1. Avcomposition :
   * 合成两个视频展示到屏幕上
-  * 裁剪视频 固定 20 秒
-  * 追加视频
+  * 轨道头部裁剪视频（固定 20 秒）
+  * 轨道尾部追加视频
 
 2. 底部编辑 View
   * scrollview 展示幻灯片/缩略图
@@ -25,7 +25,7 @@
 
 ### 编辑的交互细节略多，有 bug 见谅。
 
-
+![](https://github.com/cookies-J/TYSMCompositionDemo/blob/master/demo.gif)
 
 
 
