@@ -4,10 +4,10 @@
 ## 本 demo 主要做了以下事情：
 1. Avcomposition :
   * 合成两个视频展示到屏幕上
-  * 轨道头部裁剪视频（固定 20 秒）
-  * 轨道尾部追加视频
+  * 裁剪
+  * 追加
   * 变速
-  * 调音
+  
   （会陆续增加）
 
 2. 底部编辑 View
@@ -27,6 +27,8 @@
 
 
 ### 编辑的交互细节略多，有 bug 见谅。
+
+### 等功能加的差不多了会考虑 SDK 化。
 
 ![](https://github.com/cookies-J/TYSMCompositionDemo/blob/master/demo.gif)
 
