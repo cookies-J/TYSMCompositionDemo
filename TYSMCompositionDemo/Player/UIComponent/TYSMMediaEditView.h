@@ -43,6 +43,14 @@
  点击追加视频
  */
 - (void)handleAppendVideo;
+
+
+/**
+ 变速
+ @param isSlowDown 是否减速
+ */
+- (void)handleTransmitVideo:(BOOL)isSlowDown;
+
 @end
 
 @interface TYSMMediaEditView : UIView

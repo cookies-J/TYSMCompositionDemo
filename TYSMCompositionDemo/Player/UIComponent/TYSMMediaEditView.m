@@ -129,4 +129,10 @@
 - (void)updateProgress:(CGFloat)progress {
     [self.progressView setProgress:progress];
 }
+
+- (IBAction)tapTransmitButton:(UIButton *)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(handleTransmitVideo:)]) {
+        [self.delegate handleTransmitVideo:sender.tag];
+    }
+}
 @end

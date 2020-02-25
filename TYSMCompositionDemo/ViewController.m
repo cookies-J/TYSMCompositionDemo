@@ -98,6 +98,7 @@
     [self.playerController configureAsset:[self.mComposition copy] FPS:TYSMPlayerFPS30];
     
     self.mediaEditView.delegate = self;
+    
     // Do any additional setup after loading the view.
 }
 
@@ -157,8 +158,30 @@
     AVAsset *assetA = [AVAsset assetWithURL:[NSURL fileURLWithPath:videoPathA]];
     
     [self appendFromAsset:assetA];
-    
 }
+
+- (void)handleTransmitVideo:(BOOL)isSlowDown {
+    // 暂停
+    [self handlePlayerButton:NO];
+    
+    CMTimeRange timeRange;
+    CMTime durationTime;
+    // 如果时间范围总数大于 durationTime ，则是加速，否则减速
+    if (isSlowDown) {
+        timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeMakeWithSeconds(2, kTimeScale));
+        durationTime = CMTimeMakeWithSeconds(4, kTimeScale);
+    } else {
+        timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeMakeWithSeconds(4, kTimeScale));
+        durationTime = CMTimeMakeWithSeconds(2, kTimeScale);
+    }
+    
+    [self.mCompositionVideoTrack scaleTimeRange:timeRange
+                                     toDuration:durationTime];
+    [self.mCompositionAudioTrack scaleTimeRange:timeRange
+                                     toDuration:durationTime];
+    [self.playerController configureAsset:[self.mComposition copy] FPS:TYSMPlayerFPS30];
+}
+
 #pragma mark - 播放器控制器 delegate
 - (void)outputCVPixelBuffer:(CVPixelBufferRef)pixelBuffer currentTime:(CMTime)currentTime {
     [_playerGLView displayPixelBuffer:pixelBuffer];
