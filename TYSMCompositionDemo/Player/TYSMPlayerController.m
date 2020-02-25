@@ -7,7 +7,7 @@
 //
 
 #import "TYSMPlayerController.h"
-@interface TYSMPlayerController ()
+@interface TYSMPlayerController () <AVPlayerItemOutputPullDelegate>
 @property (nonatomic, strong) id<TYSMPlayerDelegate> delegate;
 @property (nonatomic, strong) AVPlayer *player;
 @property (nonatomic, strong) AVPlayerItem *playerItem;
@@ -36,16 +36,6 @@
     [self configurePlayerItemWithAsset:asset];
 }
 
-- (AVPlayerItemVideoOutput *)playerOutput {
-    if (_playerOutput == nil) {
-        NSDictionary *settings = @{(id)kCVPixelBufferPixelFormatTypeKey:
-                                       [NSNumber numberWithInt:kCVPixelFormatType_32BGRA]
-                                   };
-        _playerOutput = [[AVPlayerItemVideoOutput alloc] initWithPixelBufferAttributes:settings];
-    }
-    return _playerOutput;
-}
-
 - (void)configurePlayerItemWithAsset:(AVAsset *)asset {
     if (self.playerItem) {
         [self.playerItem removeOutput:self.playerOutput];
@@ -53,7 +43,6 @@
         [self.playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
         [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
     }
-    
     
     self.playerItem = [AVPlayerItem playerItemWithAsset:asset];
     
@@ -194,7 +183,7 @@
     __weak typeof(self)weakself = self;
     [self.playerItem seekToTime:time toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
         if (finished) {
-            [weakself getVideoInputCVPixelBufferWithCMTime:time];
+//            [weakself getVideoInputCVPixelBufferWithCMTime:time];
         }
     }];
 }
@@ -241,5 +230,29 @@
         
     }];
 
+}
+
+#pragma mark - delegate
+- (void)outputSequenceWasFlushed:(AVPlayerItemOutput *)output {
+    NSLog(@"%@ => %@",[NSThread currentThread],@(output.suppressesPlayerRendering));
+    [self getVideoInputCVPixelBufferWithCMTime:self.player.currentTime];
+    
+}
+
+- (void)outputMediaDataWillChange:(AVPlayerItemOutput *)sender {
+    NSLog(@"%@ => %@",[NSThread currentThread],@(sender.suppressesPlayerRendering));
+}
+
+#pragma mark - loadlazy
+- (AVPlayerItemVideoOutput *)playerOutput {
+    if (_playerOutput == nil) {
+        NSDictionary *settings = @{(id)kCVPixelBufferPixelFormatTypeKey:
+                                       [NSNumber numberWithInt:kCVPixelFormatType_32BGRA]
+                                   };
+        _playerOutput = [[AVPlayerItemVideoOutput alloc] initWithPixelBufferAttributes:settings];
+        dispatch_queue_t queue = dispatch_queue_create("output_queue", DISPATCH_QUEUE_SERIAL);
+        [_playerOutput setDelegate:self queue:queue];
+    }
+    return _playerOutput;
 }
 @end
